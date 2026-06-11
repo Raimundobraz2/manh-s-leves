@@ -1,0 +1,12 @@
+name = "manh-s-leves"
+main = "src/server.ts"
+build = { command = "bun run build" }
+site = { bucket = "dist/public" }
+
+[env.production]
+routes = [
+  { pattern = "example.com", zone_name = "example.com" }
+]
+
+[[triggers.crons]]
+crons = ["0 0 * * *"]
