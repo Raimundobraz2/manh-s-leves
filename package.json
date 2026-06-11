@@ -7,6 +7,7 @@
     "dev": "vite dev",
     "build": "vite build",
     "build:dev": "vite build --mode development",
+    "copy:redirects": "cp _redirects dist/public/_redirects || copy _redirects dist\\public\\_redirects",
     "preview": "vite preview",
     "lint": "eslint .",
     "format": "prettier --write ."

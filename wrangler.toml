@@ -1,12 +1,13 @@
 name = "manh-s-leves"
+type = "javascript"
+account_id = ""
+workers_dev = true
+
 main = "src/server.ts"
-build = { command = "bun run build" }
+build = { command = "bun run build && bun run copy:redirects" }
 site = { bucket = "dist/public" }
 
 [env.production]
 routes = [
   { pattern = "example.com", zone_name = "example.com" }
 ]
-
-[[triggers.crons]]
-crons = ["0 0 * * *"]
